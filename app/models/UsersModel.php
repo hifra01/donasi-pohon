@@ -20,7 +20,7 @@ class UsersModel
 
     public function isEmailExist($email)
     {
-        $this->db->query('SELECT COUNT(*) FROM ' . $this->table . ' WHERE email=:email');
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE email=:email');
         $this->db->bind('email', $email);
         $result = $this->db->single();
         if ($result) {
@@ -31,10 +31,10 @@ class UsersModel
 
     public function addUser($data)
     {
-        $this->db->query("INSERT INTO " . $this->table . " (full_name, email, password) VALUES (:full_name, :email: :password)");
+        $this->db->query("INSERT INTO " . $this->table . " (full_name, email, password) VALUES (:full_name, :email, :pwd)");
         $this->db->bind('full_name', $data['full_name']);
         $this->db->bind('email', $data['email']);
-        $this->db->bind('password', md5($data['password']));
+        $this->db->bind('pwd', $data['password']);
         $this->db->execute();
         return $this->db->rowCount();
     }

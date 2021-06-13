@@ -20,6 +20,12 @@ class Auth extends Controller
         $this->view('auth/register', $data);
     }
 
+    public function logout()
+    {
+        Authentication::logout();
+        header('Location: '.BASEURL);
+    }
+
     public function authenticate()
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -28,8 +34,9 @@ class Auth extends Controller
             $login = $this->model('UsersModel')->getLogin($data);
             if ($login) {
                 Authentication::setLogin($login);
+                return header('Location: '.BASEURL);
             }
-            var_dump($_SESSION);
+            return header('Location: '.BASEURL.'auth/login');
         }
     }
 
@@ -37,22 +44,23 @@ class Auth extends Controller
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             if(!filter_var($_POST['reg_email'], FILTER_VALIDATE_EMAIL)) {
-                return "Error!";
+                header("Location: ".BASEURL."auth/register");
             }
             if($_POST['reg_password'] != $_POST['reg_password_confirm']) {
-                return "Error!";
+                header("Location: ".BASEURL."auth/register");
             }
             if ($this->model('UsersModel')->isEmailExist($_POST['reg_email'])) {
-                return "Error!";
+                header("Location: ".BASEURL."auth/register");
             }
             $data['full_name'] = $_POST['reg_fullname'];
             $data['email'] = $_POST['reg_email'];
-            $data['password'] = $_POST['reg_password'];
+            $data['password'] = md5($_POST['reg_password']);
 
             $result = $this->model('UsersModel')->addUser($data);
             if ($result > 0) {
-//                success
+                return header("Location: ".BASEURL."auth/login");
             }
+            return header("Location: ".BASEURL."auth/register");
         }
     }
 }

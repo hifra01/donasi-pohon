@@ -14,7 +14,7 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
                             <h4>Semua event</h4>
                         </div>
                         <div class="card-body">
-                            <table class="table table-responsive">
+                            <table class="table table-responsive-md">
                                 <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -26,14 +26,31 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Penghijauan Jember</td>
-                                    <td>21 Oktober 2021</td>
-                                    <td>Jember, Jawa Timur</td>
-                                    <td>Akan datang</td>
-                                    <td><a href="<?= BASEURL; ?>admin/update_event/1" class="btn btn-primary mr-1">Perbarui</a></td>
-                                </tr>
+                                <?php if (!empty($data['events'])): ?>
+                                    <?php $i = 1; ?>
+                                    <?php foreach ($data['events'] as $event): ?>
+                                        <tr>
+                                            <th scope="row"><?= $i ?></th>
+                                            <td><?= $event['name'] ?></td>
+                                            <td><?= $event['start_date'] ?></td>
+                                            <td><?= $event['location'] ?></td>
+                                            <?php if ($event['status'] == 1): ?>
+                                                <td>Akan Datang</td>
+                                            <?php elseif ($event['status'] == 2): ?>
+                                                <td>Sedang Berlangsung</td>
+                                            <?php elseif ($event['status'] == 3): ?>
+                                                <td>Selesai</td>
+                                            <?php endif; ?>
+                                            <td><a href="<?= BASEURL; ?>admin/update_event/<?= $event['id'] ?>"
+                                                   class="btn btn-primary mr-1">Perbarui</a></td>
+                                        </tr>
+                                        <?php $i++; ?>
+                                    <?php endforeach; ?>
+                                <?php else: ?>
+                                    <tr>
+                                        <td colspan="6"><p class="text-center">Belum ada data</p></td>
+                                    </tr>
+                                <?php endif; ?>
                                 </tbody>
                             </table>
                         </div>

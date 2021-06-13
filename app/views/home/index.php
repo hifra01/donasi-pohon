@@ -81,7 +81,7 @@ require_once "./app/views/templates/landing/header.php";
         <div class="container">
             <div class="text-center">
                 <h2>Tunggu Apa Lagi?</h2>
-                <a href="#" class="btn btn-primary btn-lg">Donasi Sekarang!</a>
+                <a href="<?= BASEURL ?>event" class="btn btn-primary btn-lg">Donasi Sekarang!</a>
             </div>
         </div>
     </section>

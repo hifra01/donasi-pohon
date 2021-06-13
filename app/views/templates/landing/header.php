@@ -20,7 +20,7 @@
      id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
+            <a class="navbar-brand" href="<?= BASEURL ?>">
                 Donasi Pohon </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -32,36 +32,47 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
-                <!--                <li class="dropdown nav-item">-->
-                <!--                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">-->
-                <!--                        <i class="material-icons">apps</i> Components-->
-                <!--                    </a>-->
-                <!--                    <div class="dropdown-menu dropdown-with-icons">-->
-                <!--                        <a href="./index.html" class="dropdown-item">-->
-                <!--                            <i class="material-icons">layers</i> All Components-->
-                <!--                        </a>-->
-                <!--                        <a href="https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html" class="dropdown-item">-->
-                <!--                            <i class="material-icons">content_paste</i> Documentation-->
-                <!--                        </a>-->
-                <!--                    </div>-->
-                <!--                </li>-->
                 <li class="nav-item">
                     <a class="nav-link" href="<?= BASEURL; ?>">
                         <i class="material-icons">home</i> Beranda
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= BASEURL; ?>event">
+                        <i class="material-icons">today</i> Event
                     </a>
                 </li>
                 <li class="dropdown nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                         <i class="material-icons">account_circle</i> Akun
                     </a>
-                    <div class="dropdown-menu dropdown-with-icons">
-                        <a href="<?= BASEURL ?>auth/login" class="dropdown-item">
-                            Login
-                        </a>
-                        <a href="<?= BASEURL ?>auth/register" class="dropdown-item">
-                            Register
-                        </a>
-                    </div>
+                    <?php if (Authentication::isAdmin()): ?>
+                        <div class="dropdown-menu dropdown-with-icons">
+                            <a href="<?= BASEURL ?>admin/" class="dropdown-item">
+                                Admin Dashboard
+                            </a>
+                            <div class="separator-line"></div>
+                            <a href="<?= BASEURL ?>auth/logout" class="dropdown-item">
+                                Logout
+                            </a>
+                        </div>
+                    <?php elseif(Authentication::isUser()): ?>
+                        <div class="dropdown-menu dropdown-with-icons">
+                            <div class="separator-line"></div>
+                            <a href="<?= BASEURL ?>auth/logout" class="dropdown-item">
+                                Logout
+                            </a>
+                        </div>
+                    <?php else: ?>
+                        <div class="dropdown-menu dropdown-with-icons">
+                            <a href="<?= BASEURL ?>auth/login" class="dropdown-item">
+                                Login
+                            </a>
+                            <a href="<?= BASEURL ?>auth/register" class="dropdown-item">
+                                Register
+                            </a>
+                        </div>
+                    <?php endif; ?>
                 </li>
             </ul>
         </div>

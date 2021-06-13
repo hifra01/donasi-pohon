@@ -47,8 +47,15 @@
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>Donasi</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="#">Semua Donasi</a></li>
-                    <li><a class="nav-link" href="#">Konfirmasi Pembayaran</a></li>
+                    <li><a class="nav-link" href="<?= BASEURL; ?>admin/donations">Semua Donasi</a></li>
+                    <li><a class="nav-link" href="<?= BASEURL; ?>admin/confirm_donations">Konfirmasi Pembayaran</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-seedling"></i><span>Tanaman</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="<?= BASEURL; ?>admin/plants">Semua Tanaman</a></li>
+                    <li><a class="nav-link" href="<?= BASEURL; ?>admin/add_plant">Tambah Tanaman Baru</a></li>
                 </ul>
             </li>
         </ul>

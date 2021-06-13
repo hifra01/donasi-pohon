@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d5c1a5a-9424-418f-9964-a65ab4a1506e" name="Default Changelist" comment="" />
+    <list default="true" id="7d5c1a5a-9424-418f-9964-a65ab4a1506e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/admin/update_event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/98238d6a-246c-4752-ab2a-fc61f08b40b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/98238d6a-246c-4752-ab2a-fc61f08b40b3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/donasi-pohon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/donasi-pohon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Authentication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/UsersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/UsersModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/add_event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/add_event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/all_events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/all_events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/templates/dashboard/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/dashboard/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/templates/dashboard/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/dashboard/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/templates/dashboard/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/dashboard/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/templates/landing/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/landing/header.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +28,21 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1t4Xf7lsC44fFBo1rj9xTbk6bHZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,6 +54,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/dashboard/img" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -60,10 +93,39 @@
       <workItem from="1622295283710" duration="601000" />
       <workItem from="1622343957353" duration="1630000" />
       <workItem from="1622544348337" duration="9679000" />
+      <workItem from="1622948894879" duration="3991000" />
+      <workItem from="1622976411005" duration="1533000" />
+      <workItem from="1622978929505" duration="1026000" />
+      <workItem from="1623034138983" duration="3220000" />
+      <workItem from="1623044104200" duration="6550000" />
+      <workItem from="1623135517119" duration="596000" />
+      <workItem from="1623137514909" duration="3065000" />
+      <workItem from="1623162078306" duration="820000" />
+      <workItem from="1623197561881" duration="3881000" />
+      <workItem from="1623208471632" duration="10243000" />
+      <workItem from="1623292296307" duration="6880000" />
+      <workItem from="1623308949298" duration="3832000" />
+      <workItem from="1623314036162" duration="4485000" />
+      <workItem from="1623326862507" duration="8148000" />
+      <workItem from="1623417063462" duration="4686000" />
+      <workItem from="1623464451538" duration="10017000" />
+      <workItem from="1623543698675" duration="1704000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

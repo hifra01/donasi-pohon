@@ -777,31 +777,43 @@ SELECT|sys.sys_config
     </user>
     <table id="241" parent="4" name="donations"/>
     <table id="242" parent="4" name="events"/>
-    <table id="243" parent="4" name="payments"/>
-    <table id="244" parent="4" name="users"/>
-    <column id="245" parent="241" name="id">
+    <table id="243" parent="4" name="events_plants"/>
+    <table id="244" parent="4" name="payments"/>
+    <table id="245" parent="4" name="plants"/>
+    <table id="246" parent="4" name="users"/>
+    <column id="247" parent="241" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="246" parent="241" name="user_id">
+    <column id="248" parent="241" name="user_id">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="247" parent="241" name="event_id">
+    <column id="249" parent="241" name="event_id">
       <Position>3</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="248" parent="241" name="amount">
+    <column id="250" parent="241" name="plant_id">
       <Position>4</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="249" parent="241" name="status">
+    <column id="251" parent="241" name="amount">
       <Position>5</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="252" parent="241" name="total_price">
+      <Position>6</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="253" parent="241" name="status">
+      <Position>7</Position>
       <Comment>1=Awaiting payment, 2=Processing,&#xd;
 3=Completed,&#xd;
 4=Canceled </Comment>
@@ -809,62 +821,76 @@ SELECT|sys.sys_config
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="250" parent="241" name="description">
-      <Position>6</Position>
+    <column id="254" parent="241" name="description">
+      <Position>8</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="251" parent="241" name="created_at">
-      <Position>7</Position>
+    <column id="255" parent="241" name="created_at">
+      <Position>9</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="252" parent="241" name="updated_at">
-      <Position>8</Position>
+    <column id="256" parent="241" name="updated_at">
+      <Position>10</Position>
       <DataType>timestamp|0s</DataType>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <index id="253" parent="241" name="user_id">
+    <index id="257" parent="241" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="254" parent="241" name="event_id">
+    <index id="258" parent="241" name="event_id">
       <ColNames>event_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="255" parent="241" name="PRIMARY">
+    <index id="259" parent="241" name="plant_id">
+      <ColNames>plant_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="260" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="256" parent="241" name="donations_ibfk_1">
+    <foreign-key id="261" parent="241" name="donations_ibfk_1">
       <ColNames>user_id</ColNames>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="257" parent="241" name="donations_ibfk_2">
+    <foreign-key id="262" parent="241" name="donations_ibfk_2">
       <ColNames>event_id</ColNames>
       <RefTableName>events</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="258" parent="242" name="id">
+    <foreign-key id="263" parent="241" name="donations_ibfk_3">
+      <ColNames>plant_id</ColNames>
+      <RefTableName>plants</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="264" parent="242" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="259" parent="242" name="name">
+    <column id="265" parent="242" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="260" parent="242" name="location">
+    <column id="266" parent="242" name="location">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="261" parent="242" name="status">
+    <column id="267" parent="242" name="description">
       <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="268" parent="242" name="status">
+      <Position>5</Position>
       <Comment>1. Coming soon,&#xd;
 2. Ongoing,&#xd;
 3. Finished</Comment>
@@ -872,108 +898,179 @@ SELECT|sys.sys_config
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="262" parent="242" name="start_date">
-      <Position>5</Position>
+    <column id="269" parent="242" name="start_date">
+      <Position>6</Position>
       <Comment>Tanggal mulai event</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="263" parent="242" name="created_at">
-      <Position>6</Position>
+    <column id="270" parent="242" name="created_at">
+      <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="264" parent="242" name="updated_at">
-      <Position>7</Position>
+    <column id="271" parent="242" name="updated_at">
+      <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <key id="265" parent="242" name="PRIMARY">
+    <key id="272" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="266" parent="243" name="id">
+    <column id="273" parent="243" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="267" parent="243" name="donation_id">
+    <column id="274" parent="243" name="event_id">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="268" parent="243" name="amount">
+    <column id="275" parent="243" name="plant_id">
+      <Position>3</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="276" parent="243" name="event_id">
+      <ColNames>event_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="277" parent="243" name="plant_id">
+      <ColNames>plant_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="278" parent="243" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="279" parent="243" name="events_plants_ibfk_1">
+      <ColNames>event_id</ColNames>
+      <RefTableName>events</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="280" parent="243" name="events_plants_ibfk_2">
+      <ColNames>plant_id</ColNames>
+      <RefTableName>plants</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="281" parent="244" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="282" parent="244" name="donation_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="283" parent="244" name="amount">
       <Position>3</Position>
       <DataType>bigint(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="269" parent="243" name="bank_name">
+    <column id="284" parent="244" name="bank_name">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="270" parent="243" name="bank_number">
+    <column id="285" parent="244" name="bank_number">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="271" parent="243" name="status">
+    <column id="286" parent="244" name="status">
       <Position>6</Position>
       <Comment>1=pending, 2=confirmed</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="272" parent="243" name="created_at">
+    <column id="287" parent="244" name="created_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="273" parent="243" name="updated_at">
+    <column id="288" parent="244" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <index id="274" parent="243" name="donation_id">
+    <index id="289" parent="244" name="donation_id">
       <ColNames>donation_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="275" parent="243" name="PRIMARY">
+    <key id="290" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="276" parent="243" name="payments_ibfk_1">
+    <foreign-key id="291" parent="244" name="payments_ibfk_1">
       <ColNames>donation_id</ColNames>
       <RefTableName>donations</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="277" parent="244" name="id">
+    <column id="292" parent="245" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="278" parent="244" name="full_name">
+    <column id="293" parent="245" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="294" parent="245" name="price">
+      <Position>3</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="295" parent="245" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="296" parent="245" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <key id="297" parent="245" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="298" parent="246" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="299" parent="246" name="full_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="279" parent="244" name="email">
+    <column id="300" parent="246" name="email">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="280" parent="244" name="password">
+    <column id="301" parent="246" name="password">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="281" parent="244" name="role">
+    <column id="302" parent="246" name="role">
       <Position>5</Position>
       <Comment>1. Admin&#xd;
 2. User</Comment>
@@ -981,10 +1078,19 @@ SELECT|sys.sys_config
       <NotNull>1</NotNull>
       <DefaultExpression>2</DefaultExpression>
     </column>
-    <key id="282" parent="244" name="PRIMARY">
+    <index id="303" parent="246" name="email">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="304" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="305" parent="246" name="email">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
