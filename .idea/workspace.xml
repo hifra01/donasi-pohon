@@ -2,22 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d5c1a5a-9424-418f-9964-a65ab4a1506e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/admin/update_event.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/PaymentsModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/payments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/98238d6a-246c-4752-ab2a-fc61f08b40b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/98238d6a-246c-4752-ab2a-fc61f08b40b3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/donasi-pohon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/donasi-pohon.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Authentication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/UsersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/UsersModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/AuthManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/DonationsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/DonationsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/EventsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/EventsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Mahasiswa_model.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/PaymentsClass.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/add_event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/add_event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/add_plant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/add_plant.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/all_events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/all_events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/confirm_donation_detail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/confirm_donation_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/donations.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/donations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/plants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/plants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/update_event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/update_event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/update_plant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/update_plant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/auth/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/auth/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/auth/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/event/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/event/detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/event/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/event/payment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/templates/dashboard/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/dashboard/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/templates/dashboard/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/dashboard/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/templates/dashboard/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/dashboard/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/templates/dashboard/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/dashboard/nav_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/templates/landing/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/landing/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/templates/landing/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/landing/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +75,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/dashboard/img" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -109,8 +130,23 @@
       <workItem from="1623326862507" duration="8148000" />
       <workItem from="1623417063462" duration="4686000" />
       <workItem from="1623464451538" duration="10017000" />
-      <workItem from="1623543698675" duration="1704000" />
+      <workItem from="1623543698675" duration="2783000" />
+      <workItem from="1623549729480" duration="128000" />
+      <workItem from="1623552493797" duration="6436000" />
+      <workItem from="1623563580082" duration="15303000" />
+      <workItem from="1623638544650" duration="8775000" />
+      <workItem from="1623649549904" duration="7599000" />
+      <workItem from="1623657389122" duration="1285000" />
+      <workItem from="1623675596232" duration="9183000" />
     </task>
+    <task id="LOCAL-00001" summary="auth belom, confirm payment belom, dashboard user belom">
+      <created>1623545837026</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623545837026</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,5 +163,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="auth belom, confirm payment belom, dashboard user belom" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth belom, confirm payment belom, dashboard user belom" />
   </component>
 </project>

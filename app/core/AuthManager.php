@@ -1,11 +1,12 @@
 <?php
 
 
-class Authentication
+class AuthManager
 {
     public static function setLogin($data) {
         $_SESSION['user_id'] = $data['id'];
         $_SESSION['role'] = $data['role'];
+        $_SESSION['user_name'] = $data['full_name'];
     }
 
     public static function isLoggedIn() {
@@ -19,7 +20,7 @@ class Authentication
     }
 
     public static function isAdmin() {
-        if (!Authentication::isLoggedIn()) {
+        if (!AuthManager::isLoggedIn()) {
             return false;
         }
         if ($_SESSION['role'] != 1) {
@@ -29,7 +30,7 @@ class Authentication
     }
 
     public static function isUser() {
-        if (!Authentication::isLoggedIn()) {
+        if (!AuthManager::isLoggedIn()) {
             return false;
         }
         if ($_SESSION['role'] != 2) {
@@ -43,5 +44,13 @@ class Authentication
         session_destroy();
         session_write_close();
         setcookie(session_name(), '', 0, '/');
+    }
+
+    public static function getUserId(){
+        return (int)$_SESSION['user_id'];
+    }
+
+    public static function getUserName(){
+        return $_SESSION['user_name'];
     }
 }

@@ -10,12 +10,12 @@
             <a href="#" data-toggle="dropdown"
                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                 <img alt="image" src="<?= BASEURL; ?>assets/dashboard/img/avatar-1.png" class="rounded-circle mr-1">
-                <div class="d-sm-none d-lg-inline-block">Hi, Admin</div>
+                <div class="d-sm-none d-lg-inline-block">Hi, <?= AuthManager::getUserName() ?></div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Akun</div>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item has-icon text-danger">
+                <a href="<?= BASEURL ?>auth/logout" class="dropdown-item has-icon text-danger">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </a>
             </div>
@@ -40,7 +40,7 @@
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-calendar"></i><span>Event</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="<?= BASEURL; ?>admin/all_events">Semua Event</a></li>
+                    <li><a class="nav-link" href="<?= BASEURL; ?>admin/events">Semua Event</a></li>
                     <li><a class="nav-link" href="<?= BASEURL; ?>admin/add_event">Tambah Event Baru</a></li>
                 </ul>
             </li>
@@ -48,7 +48,7 @@
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-wallet"></i><span>Donasi</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="<?= BASEURL; ?>admin/donations">Semua Donasi</a></li>
-                    <li><a class="nav-link" href="<?= BASEURL; ?>admin/confirm_donations">Konfirmasi Pembayaran</a></li>
+                    <li><a class="nav-link" href="<?= BASEURL; ?>admin/payments">Semua Pembayaran</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">

@@ -1,6 +1,6 @@
 <?php
 require_once "./app/views/templates/dashboard/header.php";
-require_once "./app/views/templates/dashboard/nav.php"; ?>
+require_once "./app/views/templates/dashboard/nav_admin.php"; ?>
 
     <div class="main-content">
         <section class="section">
@@ -60,5 +60,5 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
         </section>
     </div>
 
-<?php
-require_once "./app/views/templates/dashboard/footer.php"; ?>
+<?php require_once "./app/views/templates/dashboard/scripts.php"; ?>
+<?php require_once "./app/views/templates/dashboard/footer.php"; ?>

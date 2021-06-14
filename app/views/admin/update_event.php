@@ -1,6 +1,6 @@
 <?php
 require_once "./app/views/templates/dashboard/header.php";
-require_once "./app/views/templates/dashboard/nav.php";
+require_once "./app/views/templates/dashboard/nav_admin.php";
 
 $datetime = date_create($data['event']['start_date']);
 $date = date_format($datetime, "Y-m-d");
@@ -87,5 +87,5 @@ $time = date_format($datetime, "H:i");
     </section>
 </div>
 
-<?php
-require_once "./app/views/templates/dashboard/footer.php"; ?>
+<?php require_once "./app/views/templates/dashboard/scripts.php"; ?>
+<?php require_once "./app/views/templates/dashboard/footer.php"; ?>

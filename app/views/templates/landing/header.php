@@ -46,20 +46,18 @@
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                         <i class="material-icons">account_circle</i> Akun
                     </a>
-                    <?php if (Authentication::isAdmin()): ?>
+                    <?php if(AuthManager::isLoggedIn()): ?>
                         <div class="dropdown-menu dropdown-with-icons">
-                            <a href="<?= BASEURL ?>admin/" class="dropdown-item">
-                                Admin Dashboard
+                            <?php if (AuthManager::isAdmin()): ?>
+                                <a href="<?= BASEURL ?>admin/" class="dropdown-item">
+                                    Admin Dashboard
+                                </a>
+                            <?php endif; ?>
+                            <a href="<?= BASEURL ?>user/" class="dropdown-item">
+                                User Dashboard
                             </a>
                             <div class="separator-line"></div>
-                            <a href="<?= BASEURL ?>auth/logout" class="dropdown-item">
-                                Logout
-                            </a>
-                        </div>
-                    <?php elseif(Authentication::isUser()): ?>
-                        <div class="dropdown-menu dropdown-with-icons">
-                            <div class="separator-line"></div>
-                            <a href="<?= BASEURL ?>auth/logout" class="dropdown-item">
+                            <a href="<?= BASEURL ?>auth/logout" class="dropdown-item text-danger">
                                 Logout
                             </a>
                         </div>

@@ -51,4 +51,17 @@ class EventsModel
         $this->db->execute();
         return $this->db->rowCount();
     }
+
+    public function countAllEvents() {
+        $query = "SELECT COUNT(*) count FROM ".$this->table;
+        $this->db->query($query);
+        return $this->db->single();
+    }
+
+    public function countEventsWhereStatus($status) {
+        $query = "SELECT COUNT(*) count FROM ".$this->table." WHERE status=:status";
+        $this->db->query($query);
+        $this->db->bind('status', $status);
+        return $this->db->single();
+    }
 }

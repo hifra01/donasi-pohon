@@ -19,12 +19,5 @@
 <!--  Google Maps Plugin    -->
 <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
 <script src="<?= BASEURL; ?>assets/landing/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
-<script>
-    $(document).ready(function () {
-        //init DateTimePickers
-        materialKit.initFormExtendedDatetimepickers();
-
-        // Sliders Init
-        materialKit.initSliders();
-    });
-</script>
+<script src="<?= BASEURL ?>assets/dashboard/js/sweetalert2.all.min.js"></script>
+<?php SweetAlert::alert(); ?>

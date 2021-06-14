@@ -9,5 +9,6 @@
     <orderEntry type="library" name="jquery.nicescroll" level="application" />
     <orderEntry type="library" name="summernote" level="application" />
     <orderEntry type="library" name="all" level="application" />
+    <orderEntry type="library" name="jquery.dataTables" level="application" />
   </component>
 </module>

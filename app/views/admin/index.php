@@ -1,6 +1,6 @@
 <?php
 require_once "./app/views/templates/dashboard/header.php";
-require_once "./app/views/templates/dashboard/nav.php"; ?>
+require_once "./app/views/templates/dashboard/nav_admin.php"; ?>
 
 <div class="main-content">
     <section class="section">
@@ -18,7 +18,7 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
                             <h4>Total Donasi</h4>
                         </div>
                         <div class="card-body">
-                            Rp69.666.666,00
+                            Rp<?= number_format($data['donation']['total'],2,",",".") ?>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
                             <h4>Total Event</h4>
                         </div>
                         <div class="card-body">
-                            10
+                            <?= $data['total_events']['count'] ?>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
                             <h4>Total Event Akan Datang</h4>
                         </div>
                         <div class="card-body">
-                            5
+                            <?= $data['upcoming_events']['count'] ?>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
                             <h4>Total Event Berjalan</h4>
                         </div>
                         <div class="card-body">
-                            2
+                            <?= $data['ongoing_events']['count'] ?>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
                             <h4>Total Event Selesai</h4>
                         </div>
                         <div class="card-body">
-                            3
+                            <?= $data['finished_events']['count'] ?>
                         </div>
                     </div>
                 </div>
@@ -87,5 +87,5 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
     </section>
 </div>
 
-<?php
-require_once "./app/views/templates/dashboard/footer.php"; ?>
+<?php require_once "./app/views/templates/dashboard/scripts.php"; ?>
+<?php require_once "./app/views/templates/dashboard/footer.php"; ?>

@@ -1,6 +1,6 @@
 <?php
 require_once "./app/views/templates/dashboard/header.php";
-require_once "./app/views/templates/dashboard/nav.php"; ?>
+require_once "./app/views/templates/dashboard/nav_admin.php"; ?>
 
     <div class="main-content">
         <section class="section">
@@ -14,7 +14,7 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
                             <h4>Semua Tanaman</h4>
                         </div>
                         <div class="card-body">
-                            <table class="table table-responsive-md">
+                            <table id="datatable" class="table table-responsive-md">
                                 <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -31,9 +31,9 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
                                         <tr>
                                             <td><?= $i; ?></td>
                                             <td><?= $plant['name']; ?></td>
-                                            <td>Rp<?= number_format($plant['price']); ?></td>
+                                            <td>Rp<?= number_format($plant['price'],2,",","."); ?></td>
                                             <td><a href="<?= BASEURL; ?>admin/update_plant/<?= $plant['id']; ?>"
-                                                   class="btn btn-primary mr-1">Perbarui</a>
+                                                   class="btn btn-primary">Perbarui</a>
                                             </td>
                                         </tr>
                                         <?php $i++; ?>
@@ -48,5 +48,10 @@ require_once "./app/views/templates/dashboard/nav.php"; ?>
         </section>
     </div>
 
-<?php
-require_once "./app/views/templates/dashboard/footer.php"; ?>
+<?php require_once "./app/views/templates/dashboard/scripts.php"; ?>
+    <script>
+        $(document).ready(function () {
+            $('#datatable').DataTable();
+        });
+    </script>
+<?php require_once "./app/views/templates/dashboard/footer.php"; ?>

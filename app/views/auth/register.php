@@ -18,10 +18,14 @@
 
 <body>
 <div id="app">
+    <div class="navbar-bg"></div>
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <a href="<?= BASEURL ?>" class="navbar-brand sidebar-gone-hide">Donasi Pohon</a>
+    </nav>
     <section class="section">
         <div class="container mt-5">
             <div class="row">
-                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+                <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                     <div class="card card-primary">
                         <div class="card-header"><h4>Register</h4></div>
 
@@ -78,7 +82,7 @@
                         Sudah punya akun? <a href="<?= BASEURL; ?>auth/login">Masuk Sekarang</a>
                     </div>
                     <div class="simple-footer">
-                        Copyright &copy; Stisla 2018
+                        <a href="<?= BASEURL; ?>"><i class="fa fa-home"></i> Kembali ke Beranda</a>
                     </div>
                 </div>
             </div>
@@ -101,7 +105,9 @@
 <!-- Template JS File -->
 <script src="<?= BASEURL; ?>assets/dashboard/js/scripts.js"></script>
 <script src="<?= BASEURL; ?>assets/dashboard/js/custom.js"></script>
+<script src="<?= BASEURL ?>assets/dashboard/js/sweetalert2.all.min.js"></script>
 
 <!-- Page Specific JS File -->
+<?php SweetAlert::alert(); ?>
 </body>
 </html>

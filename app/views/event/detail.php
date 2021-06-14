@@ -35,6 +35,7 @@ require_once "./app/views/templates/landing/header.php";
                     <?= $data['event']['description'] ?>
                 </div>
             </div>
+            <?php if ($data['event']['status'] == 1): ?>
             <div class="col-lg-4 col-12">
                 <div class="card">
                     <div class="card-body">
@@ -55,11 +56,25 @@ require_once "./app/views/templates/landing/header.php";
                                 <input type="number" class="form-control" min="1" id="plant_amount" name="plant_amount"
                                        value="1">
                             </div>
+                            <?php if (AuthManager::isLoggedIn()):?>
                             <input type="submit" class="btn btn-lg btn-primary w-100" value="Buat Donasi">
+                            <?php else: ?>
+                            <p class="text-center text-danger">Silakan Login terlebih dahulu!</p>
+                            <?php endif;?>
                         </form>
                     </div>
                 </div>
             </div>
+            <?php else: ?>
+            <div class="col-lg-4 col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="font-weight-bold">Pengumpulan Donasi telah ditutup!</h3>
+                        <p class="h4">Terima kasih atas partisipasinya!</p>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
     </section>
 </main>

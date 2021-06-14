@@ -1,11 +1,11 @@
 <?php
 require_once "./app/views/templates/dashboard/header.php";
-require_once "./app/views/templates/dashboard/nav_admin.php"; ?>
+require_once "./app/views/templates/dashboard/nav_user.php"; ?>
 
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Semua Donasi</h1>
+            <h1>Halo, <?= AuthManager::getUserName() ?></h1>
         </div>
         <div class="row">
             <div class="col-12">
@@ -18,6 +18,10 @@ require_once "./app/views/templates/dashboard/nav_admin.php"; ?>
                             <thead>
                             <tr>
                                 <th scope="col">ID</th>
+                                <th scope="col">Event</th>
+                                <th scope="col">Tanaman</th>
+                                <th scope="col">Jumlah</th>
+                                <th scope="col">Harga</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Detail</th>
                             </tr>
@@ -31,6 +35,10 @@ require_once "./app/views/templates/dashboard/nav_admin.php"; ?>
                                 <?php foreach ($data['donations'] as $donation): ?>
                                     <tr>
                                         <td>#<?= sprintf("%06d", $donation['id']) ?></td>
+                                        <td><?= $donation['event_name'] ?></td>
+                                        <td><?= $donation['plant_name'] ?></td>
+                                        <td><?= $donation['amount'] ?></td>
+                                        <td>Rp<?= number_format($donation['total_price'], 2, ",", ".") ?></td>
                                         <?php if ($donation['status'] == 1): ?>
                                             <td>Menunggu Pembayaran</td>
                                         <?php elseif ($donation['status'] == 2): ?>
@@ -42,7 +50,7 @@ require_once "./app/views/templates/dashboard/nav_admin.php"; ?>
                                         <?php else: ?>
                                             <td>Kode Status Tidak Diketahui</td>
                                         <?php endif; ?>
-                                        <td><a href="<?= BASEURL; ?>admin/donation/<?= $donation['id']; ?>"
+                                        <td><a href="<?= BASEURL; ?>user/donation/<?= $donation['id']; ?>"
                                                class="btn btn-primary">Detail</a></td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -55,7 +63,6 @@ require_once "./app/views/templates/dashboard/nav_admin.php"; ?>
         </div>
     </section>
 </div>
-
 
 <?php require_once "./app/views/templates/dashboard/scripts.php"; ?>
 <script>

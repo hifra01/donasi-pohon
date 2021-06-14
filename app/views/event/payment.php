@@ -53,7 +53,7 @@ require_once "./app/views/templates/landing/header.php";
                     <div class="col-lg-6 col-12">
                         <input type="hidden" name="plant_price" value="<?= $data['plant_price'] ?>">
                         <p class="text-lg-right text-left">
-                            Rp<?= number_format($data['plant_price']) ?>
+                            Rp<?= number_format($data['plant_price'],2,",",".") ?>
                         </p>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ require_once "./app/views/templates/landing/header.php";
                     <div class="col-lg-6 col-12">
                         <input type="hidden" name="total_price" value="<?= $data['total_price'] ?>">
                         <p class="h3 m-0 font-weight-bold text-lg-right text-left ">
-                            Rp<?= number_format($data['total_price']) ?>
+                            Rp<?= number_format($data['total_price'],2,",",".") ?>
                         </p>
                     </div>
                 </div>
