@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d5c1a5a-9424-418f-9964-a65ab4a1506e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/PaymentsModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/payments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/98238d6a-246c-4752-ab2a-fc61f08b40b3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/98238d6a-246c-4752-ab2a-fc61f08b40b3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/donasi-pohon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/donasi-pohon.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/AuthManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/DonationsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/DonationsModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/EventsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/EventsModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Mahasiswa_model.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/PaymentsClass.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/add_event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/add_event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/add_plant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/add_plant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/all_events.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/all_events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/confirm_donation_detail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/confirm_donation_list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/donations.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/donations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/plants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/plants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/update_event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/update_event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/update_plant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/update_plant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/auth/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/auth/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/auth/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/event/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/event/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/event/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/event/payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/templates/dashboard/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/dashboard/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/templates/dashboard/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/dashboard/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/templates/dashboard/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/dashboard/nav_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/templates/landing/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/landing/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/templates/landing/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/templates/landing/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +100,9 @@
       <workItem from="1623638544650" duration="8775000" />
       <workItem from="1623649549904" duration="7599000" />
       <workItem from="1623657389122" duration="1285000" />
-      <workItem from="1623675596232" duration="9183000" />
+      <workItem from="1623675596232" duration="9499000" />
+      <workItem from="1623762246948" duration="1853000" />
+      <workItem from="1623765959340" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="auth belom, confirm payment belom, dashboard user belom">
       <created>1623545837026</created>
@@ -146,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623545837026</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="owarimashita ehe xp">
+      <created>1623689584205</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623689584205</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +138,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="auth belom, confirm payment belom, dashboard user belom" />
-    <option name="LAST_COMMIT_MESSAGE" value="auth belom, confirm payment belom, dashboard user belom" />
+    <MESSAGE value="owarimashita ehe xp" />
+    <option name="LAST_COMMIT_MESSAGE" value="owarimashita ehe xp" />
   </component>
 </project>
